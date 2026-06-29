@@ -58,7 +58,7 @@ export default function NotsPage() {
   useEffect(() => {
     const getNots = async()=>{
 
-      const nots = await axios.post("http://localhost:5000/api/notes/getNotes" ,{},{
+      const nots = await axios.post("https://express-lilac-xi-96.vercel.app/api/notes/getNotes" ,{},{
         headers : {
           Authorization : `Bearer ${token}`
         }
@@ -98,7 +98,7 @@ export default function NotsPage() {
 
 
   const doDelete = async (id: string) => {
-    const res = await axios.delete(`http://localhost:5000/api/notes/${id}`, {
+    const res = await axios.delete(`https://express-lilac-xi-96.vercel.app/api/notes/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

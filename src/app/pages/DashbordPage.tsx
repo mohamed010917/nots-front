@@ -43,7 +43,7 @@ export default function DashboardPage() {
     const fetchStats = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:5000/api/users/statistics",
+          "https://express-lilac-xi-96.vercel.app/api/users/statistics",
           {
             headers: {
               Authorization: `Bearer ${token}`,

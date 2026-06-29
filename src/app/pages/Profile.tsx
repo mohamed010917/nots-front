@@ -50,7 +50,7 @@ function Profile() {
     const fetchStats = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:5000/api/users/statistics",
+          "https://express-lilac-xi-96.vercel.app/api/users/statistics",
           {
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -105,7 +105,7 @@ function Profile() {
       setSaving(true);
 
       const { data } = await axios.put(
-        "http://localhost:5000/api/users/profile",
+        "https://express-lilac-xi-96.vercel.app/api/users/profile",
         {
           name,
           email,
@@ -139,7 +139,7 @@ function Profile() {
       setPasswordLoading(true);
 
       await axios.put(
-        "http://localhost:5000/api/users/change-password",
+        "https://express-lilac-xi-96.vercel.app/api/users/change-password",
         {
           currentPassword: currentPw,
           newPassword: newPw,
@@ -173,7 +173,7 @@ function Profile() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/users/upload-image",
+        "https://express-lilac-xi-96.vercel.app/api/users/upload-image",
         formData,
         {
           headers: {

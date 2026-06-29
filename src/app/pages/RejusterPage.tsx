@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import { setUser } from "../../slices/UserSlice";
 
 export default function RejusterPage() {
-  const url = "http://localhost:5000/api"
+  const url = "https://express-lilac-xi-96.vercel.app/api"
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

@@ -26,7 +26,7 @@ export default  function LoginPage() {
       if (!email || !password) { setError("Please fill in all fields."); return; }
       setError(""); setLoading(true);
   
-      const data = await axios.post("http://localhost:5000/api/login", { email, password })
+      const data = await axios.post("https://express-lilac-xi-96.vercel.app/api/login", { email, password })
       console.log("data from login page" , data) ;
       if(data.status === 402){
         setError("User not found. Please check your email and try again.");

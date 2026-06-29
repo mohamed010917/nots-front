@@ -53,7 +53,7 @@ export default function ShowNots() {
 
     const fetchNote = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/notes/" + id ,{
+        const response = await axios.get("https://express-lilac-xi-96.vercel.app/api/notes/" + id ,{
             headers : {
                 Authorization : `Bearer ${token}`
             }
@@ -76,7 +76,7 @@ export default function ShowNots() {
   }, [id]);
 
   const handleDelete = async () => {
- const res = await axios.delete(`http://localhost:5000/api/notes/${id}`, {
+ const res = await axios.delete(`https://express-lilac-xi-96.vercel.app/api/notes/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

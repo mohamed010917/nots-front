@@ -50,7 +50,7 @@ export default function NoteEditorPage() {
     if(id){
       const fetchNote = async () => {
         try{
-          const res = await axios.get(`http://localhost:5000/api/notes/${id}`, {
+          const res = await axios.get(`https://express-lilac-xi-96.vercel.app/api/notes/${id}`, {
             headers: {
               authorization: "Bearer " + token,
               contentType: "application/json",
@@ -103,7 +103,7 @@ export default function NoteEditorPage() {
 
       setSaving(true);
       const noteData = { title, content, category, status, tags, isPinned };
-      let res = await axios.post("http://localhost:5000/api/notes/addNote", noteData, {
+      let res = await axios.post("https://express-lilac-xi-96.vercel.app/api/notes/addNote", noteData, {
         headers :{
           authorization : "Bearer " + token ,
           contentType: "application/json" ,
@@ -133,7 +133,7 @@ export default function NoteEditorPage() {
     try{
       setSaving(true);
       const noteData = { title, content, category, status, tags, isPinned };
-      let res = await axios.put(`http://localhost:5000/api/notes/${id}`, noteData, {
+      let res = await axios.put(`https://express-lilac-xi-96.vercel.app/api/notes/${id}`, noteData, {
         headers :{
           authorization : "Bearer " + token ,
           contentType: "application/json" ,
